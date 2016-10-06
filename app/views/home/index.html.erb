@@ -1,13 +1,13 @@
 <div class="container">
+
   <div class="row">
-    <h1 class="text-center">Hello!</h1>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <form action="/movies" method="post">
-        <input type="text" name="movie[title">
-        <input type="submit" value="Search">
-      </form>
+    <div class="col-sm-4 col-sm-offset-1">
+      <%= react_component 'MovieSearch' %>
+    </div>
+    <div class="col-sm-4 col-sm-offset-2">
+      <h2 class="h2">Fight Club (1999)</h2>
+      <img class="img-fluid" src="http://ia.media-imdb.com/images/M/MV5BMzc1YmU2ZjEtYWIwMC00ZjM3LWI0NTctMDVlNGQ3YmYwMzE5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg">
+      <br>
+      <p>Plot: An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more.</p>
     </div>
   </div>
-</div>

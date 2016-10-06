@@ -21,3 +21,11 @@
   padding: 40px 15px;
   text-align: center;
 }
+
+.row p {
+  margin-top: 8px;
+  padding-top: 2px;
+  border-bottom: solid 1px grey;
+  border-top: solid 1px grey;
+}
+
