@@ -1,17 +1,23 @@
 class MovieSearch extends React.Component {
+  constructor() {
+    super();
+    this.searchIt = this.searchIt.bind(this);
+  }
 
-  searchIt(e) {
-    e.preventDefault();
-    data = this.refs.searchForm.serialize();
+  searchIt(event) {
+    event.preventDefault();
+    var params = {
+      t: this.refs.titleBox.value,
+      y: this.refs.yearBox.value
+    }
     $.ajax({
       dataType: "json",
       url: "http://www.omdbapi.com/?",
-      data: data,
+      data: jQuery.param(params)
     })
     .done(function(response) {
-      debugger;
-      this.setState({movie_info: response});
-    })
+      this.props.searchComplete(response);
+    }.bind(this))
   }
 
   render() {
