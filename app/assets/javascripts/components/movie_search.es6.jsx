@@ -8,10 +8,11 @@ class MovieSearch extends React.Component {
     event.preventDefault();
     var params = {
       t: this.refs.titleBox.value,
-      y: this.refs.yearBox.value
+      y: this.refs.yearBox.value,
+      type: 'movie'
     }
     $.ajax({
-      dataType: "json",
+      accepts: 'application/json',
       url: "http://www.omdbapi.com/?",
       data: jQuery.param(params)
     })
@@ -25,11 +26,11 @@ class MovieSearch extends React.Component {
       <form ref="searchForm" className="movieSearch" onSubmit={this.searchIt}>
         <div className="form-group">
           <label htmlFor="t">Movie title:</label>
-          <input ref="titleBox" className="form-control" type="text" name="t"/>
+          <input ref="titleBox" className="form-control" type="text"/>
         </div>
         <div className="form-group">
           <label htmlFor="t">Movie year (optional):</label>
-          <input ref="yearBox" className="form-control" type="text" name="y"/>
+          <input ref="yearBox" className="form-control" type="text"/>
         </div>
           <input className="btn btn-primary" type="submit" value="Search"/>
       </form>

@@ -9,9 +9,9 @@ class MovieDisplay extends React.Component {
   
     let { Title, Year, Poster, Plot } = this.props.movie_info;
     return(
-      <div>
-        <h2 className="h2">{Title} ({Year})</h2>
-        <img className="img-fluid" src={Poster} />
+      <div className="text-center">
+        <h2 className="h2 text-center">{Title} ({Year})</h2>
+        <img className="img-fluid " src={Poster} />
         <p>Plot: {Plot}</p>
       </div>
       )
