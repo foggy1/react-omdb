@@ -1,5 +1,6 @@
 class MovieDisplay extends React.Component {
   render() {
+    // let { title, img_src, plot } = this.props.data;
     return(
       <div>
         <h2 className="h2">Fight Club (1999)</h2>
