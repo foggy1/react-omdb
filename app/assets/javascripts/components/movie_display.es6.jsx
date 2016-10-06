@@ -19,15 +19,3 @@ class MovieDisplay extends React.Component {
 }
 
 
-    $('.btn').click(function(e) {
-      e.preventDefault();
-      data = $('.movieSearch').serialize();
-      $.ajax({
-        dataType: "json",
-        url: "http://www.omdbapi.com/?",
-        data: data,
-      })
-      .done(function(response) {
-        this.setState({movie_info: response});
-      })
-    })
