@@ -1,6 +1,23 @@
 class App extends React.Component {
+  componentDidMount() {
+    $('.btn').click(function(e) {
+      e.preventDefault();
+      data = $('.movieSearch').serialize();
+      $.ajax({
+        dataType: "json",
+        url: "http://www.omdbapi.com/?",
+        data: data,
+      })
+      .done(function(response) {
+        debugger;
+
+      })
+    })
+  }
   render() {
-    
+
+
+
     return(
       <div className="container">
         <div className="row">
