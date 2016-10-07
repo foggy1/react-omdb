@@ -16,9 +16,11 @@ class MovieSearch extends React.Component {
       url: "http://www.omdbapi.com/?",
       data: jQuery.param(params)
     })
-    .done(function(response) {
+    .done(response => {
+      this.refs.titleBox.value = ''
+      this.refs.yearBox.value = ''
       this.props.searchComplete(response);
-    }.bind(this))
+    })
   }
 
   render() {

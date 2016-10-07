@@ -25,7 +25,7 @@ class App extends React.Component {
             <MovieSearch searchComplete={this.updateInfo}/>
           </div>
           <div className="col-sm-4 col-sm-offset-2">
-            <MovieDisplay movie_info={this.state.movie_info}/>
+            <MovieDisplay jumanji={2} movie_info={this.state.movie_info}/>
           </div>
         </div>
       </div>
